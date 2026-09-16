@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Artificial Intelligence | Kelompok 1</title>
+<meta name="description" content="Microsite pembelajaran Artificial Intelligence Kelompok 1 untuk tugas Informatika.">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:#f5f8ff;color:#172033;line-height:1.7}
+header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid #e5eaf5}
+.nav{max-width:1100px;margin:auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-weight:800;color:#155eef;font-size:18px}
+nav a{color:#465268;text-decoration:none;margin-left:18px;font-size:14px;font-weight:600}
+nav a:hover{color:#155eef}
+.hero{background:linear-gradient(135deg,#071a3a,#0c4bb3 55%,#19b7e8);color:white;padding:90px 20px 85px;overflow:hidden}
+.hero-inner{max-width:1100px;margin:auto;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.badge{display:inline-block;padding:7px 13px;border:1px solid rgba(255,255,255,.3);border-radius:999px;background:rgba(255,255,255,.1);font-size:13px;margin-bottom:18px}
+h1{font-size:clamp(42px,7vw,76px);line-height:1.05;letter-spacing:-2px;margin-bottom:18px}
+.hero p{max-width:680px;color:#e5f4ff;font-size:18px}
+.hero-btn{display:inline-block;margin-top:28px;padding:13px 20px;background:white;color:#0c4bb3;border-radius:12px;text-decoration:none;font-weight:800}
+.ai-orb{width:280px;height:280px;margin:auto;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,#8cecff,#1677dc 42%,#061a40 70%);box-shadow:0 0 70px rgba(74,218,255,.4);font-size:82px}
+section{max-width:1100px;margin:auto;padding:70px 20px}
+.section-head{text-align:center;max-width:760px;margin:0 auto 42px}
+.section-head span{color:#155eef;font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:1.5px}
+.section-head h2{font-size:36px;line-height:1.2;margin:8px 0 12px}
+.section-head p{color:#667085}
+.card{background:white;border:1px solid #e4e9f2;border-radius:20px;padding:28px;box-shadow:0 8px 25px rgba(20,45,90,.06);margin-bottom:22px}
+.card h3{font-size:23px;margin-bottom:10px}
+.card p{color:#536075}
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:25px}
+.flow div{padding:22px 14px;text-align:center;background:#eef5ff;border-radius:16px;font-weight:800;color:#155eef}
+.types{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.type{background:white;border-radius:20px;padding:28px;border:1px solid #e4e9f2;box-shadow:0 8px 25px rgba(20,45,90,.06)}
+.type .num{font-size:13px;font-weight:800;color:#155eef}
+.type h3{margin:7px 0}
+.type p{color:#59657a}
+.type strong{display:block;margin-top:15px;color:#172033}
+.compare{width:100%;border-collapse:collapse;background:white;border-radius:16px;overflow:hidden;box-shadow:0 8px 25px rgba(20,45,90,.06)}
+.compare th,.compare td{padding:16px;text-align:left;border-bottom:1px solid #e8edf5}
+.compare th{background:#0c4bb3;color:white}
+.examples{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.example{background:white;border:1px solid #e4e9f2;border-radius:18px;padding:22px}
+.example .icon{font-size:30px}
+.example h4{margin:8px 0 3px}
+.example p{font-size:14px;color:#667085}
+.benefits{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.benefit{padding:23px;border-radius:18px;background:white;border:1px solid #e4e9f2}
+.benefit h4{margin-bottom:5px}
+.tips{background:#0b1f43;color:white;border-radius:24px;padding:38px}
+.tips li{margin:10px 0 0 22px;color:#dce8ff}
+.quiz{background:linear-gradient(135deg,#eaf4ff,#fff);border:1px solid #d7e5ff}
+button{border:0;background:#155eef;color:white;padding:12px 18px;border-radius:10px;font-weight:800;cursor:pointer;margin-top:14px}
+#answer{margin-top:14px;font-weight:700}
+footer{background:#071a3a;color:#cbd8ee;text-align:center;padding:35px 20px}
+footer strong{color:white}
+@media(max-width:800px){
+ nav{display:none}.hero-inner{grid-template-columns:1fr}.ai-orb{width:190px;height:190px;font-size:55px}
+ .flow,.types,.examples,.benefits{grid-template-columns:1fr}
+ .section-head h2{font-size:30px}
+ .compare{font-size:13px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">AI • KELOMPOK 1</div>
+    <nav>
+      <a href="#pengertian">Pengertian</a>
+      <a href="#jenis">Jenis AI</a>
+      <a href="#contoh">Contoh</a>
+      <a href="#bijak">Penggunaan</a>
+      <a href="#quiz">Quiz</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="badge">TUGAS INFORMATIKA • MICROSITE</div>
+      <h1>Artificial<br>Intelligence</h1>
+      <p>Kenali teknologi AI, cara kerjanya, jenis-jenisnya, manfaatnya, dan bagaimana kita menggunakannya dengan bijak dalam kehidupan sehari-hari.</p>
+      <a class="hero-btn" href="#pengertian">Mulai Belajar →</a>
+    </div>
+    <div class="ai-orb">🤖</div>
+  </div>
+</section>
+
+<section id="pengertian">
+  <div class="section-head">
+    <span>01 • Dasar</span>
+    <h2>Apa Itu Artificial Intelligence?</h2>
+    <p>Memahami AI dari hal paling sederhana.</p>
+  </div>
+  <div class="card">
+    <h3>🧠 AI = Kecerdasan Buatan</h3>
+    <p><b>Artificial Intelligence (AI)</b> atau kecerdasan buatan adalah teknologi yang memungkinkan komputer atau mesin melakukan tugas yang biasanya membutuhkan kemampuan manusia, seperti mengenali pola, memahami bahasa, menganalisis data, membuat prediksi, dan menghasilkan konten.</p>
+    <br>
+    <p>AI bukan berarti komputer benar-benar berpikir dan memiliki perasaan seperti manusia. AI bekerja dengan memanfaatkan <b>data, algoritma, dan model komputer</b> untuk menghasilkan suatu keluaran.</p>
+  </div>
+  <div class="card">
+    <h3>⚙️ Bagaimana AI Bekerja?</h3>
+    <p>Secara sederhana, AI menerima data, mengolahnya, mempelajari pola, lalu menghasilkan sebuah keluaran.</p>
+    <div class="flow">
+      <div>📥 DATA</div><div>⚙️ PROSES</div><div>🧠 BELAJAR</div><div>🎯 HASIL</div>
+    </div>
+  </div>
+</section>
+
+<section id="jenis">
+  <div class="section-head">
+    <span>02 • Kenali</span>
+    <h2>Jenis-Jenis AI</h2>
+    <p>AI tidak hanya chatbot. Ada berbagai teknologi dengan fungsi dan cara kerja yang berbeda.</p>
+  </div>
+  <div class="types">
+    <article class="type">
+      <div class="num">01 — MACHINE LEARNING</div>
+      <h3>📚 Belajar dari Data</h3>
+      <p>Machine Learning adalah bagian dari AI yang memungkinkan komputer belajar dari data dan menemukan pola untuk membuat prediksi atau keputusan.</p>
+      <strong>Contoh: rekomendasi lagu, film, dan deteksi spam.</strong>
+      <strong>Intinya: ML = belajar dari data.</strong>
+    </article>
+    <article class="type">
+      <div class="num">02 — DEEP LEARNING</div>
+      <h3>🧠 Belajar Pola Kompleks</h3>
+      <p>Deep Learning adalah bagian dari Machine Learning yang menggunakan jaringan saraf tiruan dengan banyak lapisan untuk mempelajari pola yang lebih kompleks.</p>
+      <strong>Contoh: pengenalan wajah, suara, dan objek.</strong>
+      <strong>Intinya: DL = belajar pola yang lebih kompleks.</strong>
+    </article>
+    <article class="type">
+      <div class="num">03 — GENERATIVE AI</div>
+      <h3>✨ Bisa Menghasilkan</h3>
+      <p>Generative AI dapat menghasilkan konten baru berdasarkan perintah atau input pengguna.</p>
+      <strong>Contoh: teks, gambar, suara, video, dan kode.</strong>
+      <strong>Intinya: Generative AI = menghasilkan konten baru.</strong>
+    </article>
+  </div>
+</section>
+
+<section>
+  <div class="section-head">
+    <span>03 • Bandingkan</span>
+    <h2>ML, DL, dan Generative AI</h2>
+    <p>Gunakan tabel ini untuk mengingat perbedaannya.</p>
+  </div>
+  <table class="compare">
+    <tr><th>Teknologi</th><th>Fokus</th><th>Contoh</th></tr>
+    <tr><td><b>Machine Learning</b></td><td>Belajar dari data dan menemukan pola</td><td>Rekomendasi lagu</td></tr>
+    <tr><td><b>Deep Learning</b></td><td>Mempelajari pola yang lebih kompleks</td><td>Pengenalan wajah</td></tr>
+    <tr><td><b>Generative AI</b></td><td>Menghasilkan konten baru</td><td>Membuat teks dan gambar</td></tr>
+  </table>
+  <div class="card" style="margin-top:22px;text-align:center">
+    <b>🧠 Cara mudah mengingat:</b><br>
+    <span style="color:#155eef;font-weight:800">ML → BELAJAR</span> &nbsp; • &nbsp;
+    <span style="color:#155eef;font-weight:800">DL → POLA KOMPLEKS</span> &nbsp; • &nbsp;
+    <span style="color:#155eef;font-weight:800">Generative AI → MEMBUAT</span>
+  </div>
+</section>
+
+<section id="contoh">
+  <div class="section-head">
+    <span>04 • Di Sekitar Kita</span>
+    <h2>Contoh AI dalam Kehidupan Sehari-hari</h2>
+    <p>Tanpa disadari, kita mungkin sudah berinteraksi dengan AI setiap hari.</p>
+  </div>
+  <div class="examples">
+    <div class="example"><div class="icon">📸</div><h4>Kamera HP</h4><p>Membantu mengenali wajah atau objek dan mengoptimalkan foto.</p></div>
+    <div class="example"><div class="icon">🎵</div><h4>Aplikasi Musik</h4><p>Memberikan rekomendasi lagu berdasarkan aktivitas pengguna.</p></div>
+    <div class="example"><div class="icon">🎬</div><h4>Media Sosial</h4><p>Mempelajari pola interaksi untuk menampilkan konten yang relevan.</p></div>
+    <div class="example"><div class="icon">🗺️</div><h4>Navigasi</h4><p>Membantu menentukan rute dan memperkirakan perjalanan.</p></div>
+    <div class="example"><div class="icon">💬</div><h4>Chatbot</h4><p>Memahami pertanyaan dan menghasilkan respons.</p></div>
+    <div class="example"><div class="icon">🌐</div><h4>Penerjemah</h4><p>Membantu menerjemahkan teks antarbahasa.</p></div>
+    <div class="example"><div class="icon">🛒</div><h4>Belanja Online</h4><p>Memberikan rekomendasi produk yang mungkin sesuai.</p></div>
+    <div class="example"><div class="icon">🎨</div><h4>AI Kreatif</h4><p>Membantu membuat teks, gambar, audio, dan ide.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="section-head">
+    <span>05 • Dampak</span>
+    <h2>Manfaat dan Tantangan AI</h2>
+  </div>
+  <div class="benefits">
+    <div class="benefit"><h4>🎓 Pendidikan</h4><p>Mempermudah mencari penjelasan, latihan, dan ide belajar.</p></div>
+    <div class="benefit"><h4>🏥 Kesehatan</h4><p>Membantu mengolah dan menganalisis data dalam bidang kesehatan.</p></div>
+    <div class="benefit"><h4>💼 Bisnis</h4><p>Membantu analisis data, rekomendasi, dan otomatisasi pekerjaan tertentu.</p></div>
+    <div class="benefit"><h4>🎨 Kreativitas</h4><p>Membantu mencari ide dan membuat berbagai konten digital.</p></div>
+    <div class="benefit"><h4>⚠️ Jawaban Bisa Salah</h4><p>AI dapat menghasilkan informasi yang terlihat meyakinkan tetapi tidak selalu benar.</p></div>
+    <div class="benefit"><h4>🔐 Privasi</h4><p>Pengguna perlu berhati-hati saat memasukkan data pribadi ke layanan AI.</p></div>
+    <div class="benefit"><h4>⚖️ Bias</h4><p>Data yang memiliki bias dapat memengaruhi hasil sistem AI.</p></div>
+    <div class="benefit"><h4>🧠 Ketergantungan</h4><p>Terlalu bergantung pada AI dapat mengurangi kesempatan melatih kemampuan berpikir sendiri.</p></div>
+  </div>
+</section>
+
+<section id="bijak">
+  <div class="tips">
+    <h2>🛡️ Gunakan AI dengan Bijak</h2>
+    <ul>
+      <li>Gunakan AI sebagai alat bantu belajar.</li>
+      <li>Periksa kembali informasi yang diberikan AI.</li>
+      <li>Jangan langsung menyalin jawaban tanpa memahaminya.</li>
+      <li>Jaga data pribadi dan informasi penting.</li>
+      <li>Tetap gunakan kemampuan berpikir kritis.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="section-head">
+    <span>06 • Masa Depan</span>
+    <h2>AI dan Masa Depan</h2>
+  </div>
+  <div class="card">
+    <p>Perkembangan AI terus berjalan dan penggunaannya semakin luas. AI dapat membantu manusia menyelesaikan berbagai pekerjaan, tetapi manusia tetap memiliki peran penting dalam menentukan bagaimana teknologi tersebut digunakan.</p>
+    <br>
+    <p>Karena itu, kita tidak hanya perlu <b>bisa menggunakan AI</b>, tetapi juga perlu memiliki kemampuan <b>berpikir kritis, kreatif, bekerja sama, memahami keamanan digital, dan menggunakan teknologi secara bertanggung jawab.</b></p>
+  </div>
+</section>
+
+<section id="quiz">
+  <div class="section-head">
+    <span>07 • Cek Pemahaman</span>
+    <h2>🎯 Mini Quiz</h2>
+    <p>Sudah paham? Coba jawab pertanyaan berikut.</p>
+  </div>
+  <div class="card quiz">
+    <h3>Apa yang menjadi fokus utama Generative AI?</h3>
+    <p>A. Menghasilkan konten baru<br>B. Hanya menyimpan data<br>C. Mematikan komputer<br>D. Menghapus semua data</p>
+    <button onclick="document.getElementById('answer').textContent='✅ Jawaban: A. Menghasilkan konten baru.'">Lihat Jawaban</button>
+    <div id="answer"></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <p><strong>ARTIFICIAL INTELLIGENCE — KELOMPOK 1</strong></p>
+  <p>Microsite Tugas Informatika • Learn • Understand • Use AI Wisely</p>
+</footer>
+
+</body>
+</html>
